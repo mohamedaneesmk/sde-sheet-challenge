@@ -1,5 +1,3 @@
-package arrays;
-
 /*
 TASK 1 : Find the element in the particular place
 public class PascalsTriangle {
