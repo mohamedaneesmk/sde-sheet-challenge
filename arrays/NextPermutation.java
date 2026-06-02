@@ -28,7 +28,7 @@ public class NextPermutation {
 
             swap(nums, pivot, successor);
         }
-
+ 
         // Step 3: Reverse the suffix
         reverse(nums, pivot + 1, nums.length - 1);
     }
