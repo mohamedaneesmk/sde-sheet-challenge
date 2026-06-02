@@ -10,7 +10,7 @@ public class PascalsTriangle {
         int k = c - 1;
 
         long result = 1;
-
+ 
         for (int i = 0; i < k; i++) {
             result = result * (n - i);
             result = result / (i + 1);
