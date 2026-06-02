@@ -57,7 +57,7 @@ public class PascalsTriangle {
         List<List<Integer>> result = new ArrayList<>();
 
         for (int row = 0; row < numRows; row++) {
-
+ 
             List<Integer> currentRow = new ArrayList<>();
 
             for (int col = 0; col <= row; col++) {
