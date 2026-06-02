@@ -25,7 +25,7 @@ public class MaximumSubarray {
 */
 
 // BETTER
-public class MaximumSubarray {
+/*public class MaximumSubarray {
     public static void main(String[] args) {
         int[] nums = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
         System.out.println(maximumSubarray(nums));
@@ -40,6 +40,30 @@ public class MaximumSubarray {
                 sum = sum + nums[j];
                 maxSum = Math.max(sum, maxSum);
             }
+        }
+
+        return maxSum;
+    }
+}
+*/
+
+// KADANE'S ALGORITHM
+public class MaximumSubarray {
+    public static void main(String[] args) {
+        int[] nums = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+        System.out.println(maximumSubarray(nums));
+    }
+
+    private static int maximumSubarray(int[] nums) {
+        int maxSum = Integer.MIN_VALUE;
+        int sum = 0;
+
+        for (int num : nums) {
+            sum += num;
+            maxSum = Math.max(maxSum, sum);
+
+            if (sum < 0)
+                sum = 0;
         }
 
         return maxSum;
