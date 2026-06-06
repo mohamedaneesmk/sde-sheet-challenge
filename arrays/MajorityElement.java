@@ -4,21 +4,44 @@ public class MajorityElement {
         System.out.println(majorityElement(nums));
     }
 
-    // BRUTE FORCE SOLUTION
+    // Boyer-Moore Voting Algorithm
     private static int majorityElement(int[] nums) {
-        for (int i = 0; i < nums.length; i++) {
-            int count = 0;
-            for (int j = i; j < nums.length; j++) {
-                if (nums[j] == nums[i]) {
-                    count++;
-                }
+        int count = 0;
+        int candiate = 0;
+
+        for (int num : nums) {
+            if (count == 0) {
+                candiate = num;
             }
 
-            if (count > nums.length / 2) {
-                return nums[i];
+            if (num == candiate) {
+                count++;
+            } else {
+                count--;
             }
         }
 
-        return -1;
+        return candiate;
     }
+
+    // BRUTE FORCE SOLUTION
+    /*
+     * private static int majorityElement(int[] nums) {
+     * for (int i = 0; i < nums.length; i++) {
+     * int count = 0;
+     * for (int j = i; j < nums.length; j++) {
+     * if (nums[j] == nums[i]) {
+     * count++;
+     * }
+     * }
+     * 
+     * if (count > nums.length / 2) {
+     * return nums[i];
+     * }
+     * }
+     * 
+     * return -1;
+     * }
+     */
+
 }
