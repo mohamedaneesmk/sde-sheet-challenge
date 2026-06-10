@@ -16,7 +16,7 @@ public class MergeOverlappingIntervals {
         List<int[]> answer = new ArrayList<>();
 
         for (int[] interval : intervals) {
-            if (answer.isEmpty() || answer.get(answer.size() - 1)[1] < interval[0]) {
+            if (answer.isEmpty() || interval[0] > answer.get(answer.size() - 1)[1]) {
                 answer.add(interval);
             } else {
                 answer.get(answer.size() - 1)[1] = Math.max(answer.get(answer.size() - 1)[1], interval[1]);
