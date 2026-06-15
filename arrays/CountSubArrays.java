@@ -62,7 +62,7 @@ import java.util.HashMap;
 public class CountSubArrays {
     public static void main(String[] args) {
         int[] arr = { 4, 2, 2, 6, 4 };
-        int k = 6;
+        int k = 6; 
 
         System.out.println(countSubArrays(arr, k));
     }
