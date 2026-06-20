@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 public class LongestUniqueSubstring {
     public static void main(String[] args) {
-        String string = "abcabcbb";
+        String string = "abcab";
         System.out.println(findLongestUniqueSubstring(string));
     }
 
